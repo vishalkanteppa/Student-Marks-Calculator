@@ -6,8 +6,13 @@
     <meta name="description" content="Login - Register Template">
     <meta name="author" content="Lorenzo Angelino aka MrLolok">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
     <style>
         body {
             background-color: #303641;
@@ -16,6 +21,8 @@
 </head>
 
 <body>
+    <script type="text/javascript" src="register.js"></script>
+
     <div id="container-register">
         <div id="title">
             <i class="material-icons lock">lock</i> Register
@@ -27,7 +34,7 @@
                     <i class="material-icons">email</i>
                 </div>
                 <input id="email" placeholder="Email" type="email" required class="validate" autocomplete="off">
-            </div>
+            </div> 
 
             <div class="clearfix"></div>
 
@@ -47,16 +54,13 @@
                 <input id="password" placeholder="Password" type="password" required class="validate" autocomplete="off">
             </div><br>
 
-            <!-- <div class="remember-me">
-                <input type="checkbox">
-                <span style="color: #DDD">I accept Terms of Service</span>
-            </div> -->
 
-            <input type="submit" value="Register" />
+            <input type="button" class="btn btn-secondary" value="Register" onclick="insert1()" />
         </form>
 
         <div class="privacy">
-            <a href="#">Privacy Policy</a>
+            <a href="#">Privacy Policy</a><br>
+            <div id="success"></div>
         </div>
 
         <div class="register">
