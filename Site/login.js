@@ -27,7 +27,7 @@ function login()
           if (xhttp.readyState == 4 && xhttp.status == "200") {
             var res = xhttp.responseText;
             console.log(res);
-            window.location.href="page1.html";            
+            window.location.href="main.html";            
           } 
           else if(xhttp.readyState == 4) {
             document.getElementById("username").value="";

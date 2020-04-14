@@ -234,11 +234,10 @@ class correlateData(Resource):
         plt.xlim(0, 100)
         plt.ylim(0, 100)
         plt.scatter(df[S1], df[S2])
-        # plt.savefig("/var/www/html/Plots/"+S1+"_vs_"+S2+".png")
-        plt.savefig("../Plots"+S1+"_vs_"+S2+".png")
+        plt.savefig("/var/www/html/Plots/"+S1+"_vs_"+S2+".png")
+        # plt.savefig("../Plots"+S1+"_vs_"+S2+".png")
         plt.clf()
         plt.close()
-        # To access the Image go to http://localhost/<The URL in the Respose>
         return [df.corr(method='pearson')[S1][S2], "Plots/"+S1+"_vs_"+S2+".png"], 200
 
 
