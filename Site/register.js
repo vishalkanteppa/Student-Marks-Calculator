@@ -1,4 +1,4 @@
-var url = "http://localhost:70";
+var url = "http://localhost:5000";
 
 function insert1() {
     var api = url + "/api/v1/users";
@@ -22,7 +22,7 @@ function insert1() {
     xhttp.open("POST", curl, true);
     xhttp.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
-    xhttp.onreadystatechange = function () {
+    xhttp.onreadystatechange = function() {
 
 
         if (xhttp.readyState == 4 && xhttp.status == "200") {
@@ -30,8 +30,7 @@ function insert1() {
             console.log(res);
             window.location.href = "login.html";
             alert("Registration succesful! Please login to continue")
-        }
-        else if (xhttp.readyState == 4) {
+        } else if (xhttp.readyState == 4) {
             var res = xhttp.responseText;
             console.log(res);
             document.getElementById("username").value = "";
