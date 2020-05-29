@@ -117,11 +117,11 @@
     <script type="text/javascript" src="performance.js"></script>
 
     <div class="topnav">
-        <a class="active" href="login.html">Logout</a>
-        <a href="student.html">Add Student</a>
-        <a href="performance.html">Batch Performance</a>
-        <a href="predict.html">Predictor</a>
-        <a href="main.html" class="icon">
+        <a class="active" href="login.html" id="login">Logout</a>
+        <a href="student.html" id="student">Add Student</a>
+        <a href="performance.html" id="performance">Batch Performance</a>
+        <a href="predict.html" id="predict">Predictor</a>
+        <a href="main.html" class="icon" id="main">
             <span class="glyphicon glyphicon-education"></span>
         </a>
     </div>
@@ -162,7 +162,7 @@
                     </div>
                 </div>
                 <br><br>
-                <button type="button" class="btn btn-info" onclick="correlate()">Correlate</button>
+                <button type="button" class="btn btn-info" id="button" onclick="correlate()">Correlate</button>
 
             </form>
         </center>

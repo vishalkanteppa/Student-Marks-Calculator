@@ -72,7 +72,7 @@ function Search() {
 
             //response.innerHTML=res; 
         } else if (xhttp.readyState == 4) {
-            alert("Error");
+            alert("Student Does Not Exist");
         }
 
     }
