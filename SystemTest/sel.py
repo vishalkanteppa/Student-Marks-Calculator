@@ -10,7 +10,7 @@ driver.implicitly_wait(100)
 
 search=driver.find_element_by_name("q")
 
-search.send_keys("gta v")
+search.send_keys("idk")
 
 button=driver.find_element_by_name("btnK")
 button.click()

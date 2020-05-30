@@ -65,6 +65,7 @@ marks.send_keys("90")
 time.sleep(2)
 submit = driver.find_element_by_id("submit")
 submit.click()
+time.sleep(2)
 marks.clear()
 
 el = driver.find_element_by_id('sub')
@@ -129,7 +130,67 @@ stud=driver.find_element_by_id("student")
 stud.click()
 
 #student page
+fname=driver.find_element_by_id("fname")
+fname.send_keys("Good")
+lname=driver.find_element_by_id("lname")
+lname.send_keys("Name")
+math=driver.find_element_by_id("math")
+chem=driver.find_element_by_id("chem")
+bio=driver.find_element_by_id("bio")
+cs=driver.find_element_by_id("cs")
+sp=driver.find_element_by_id("sports")
+math.send_keys("90")
+chem.send_keys("90")
+bio.send_keys("90")
+cs.send_keys("90")
+sp.click()
 
+time.sleep(2)
+submit=driver.find_element_by_id("submit")
+submit.click()
+time.sleep(2)
+
+login=driver.find_element_by_id("login")
+login.click()
+
+reg=driver.find_element_by_id("register-link")
+reg.click()
+
+#register page
+email=driver.find_element_by_id("email")
+uname=driver.find_element_by_id("username")
+pwd=driver.find_element_by_id("password")
+button=driver.find_element_by_id("button")
+
+email.send_keys("rishi@gmail.com")
+uname.send_keys("rishi")
+pwd.send_keys("rishi")
+time.sleep(2)
+button.click()
+try:
+    WebDriverWait(driver, 3).until(EC.alert_is_present(
+    ), 'Timed out waiting for PA creation confirmation popup to appear.')
+    alert = driver.switch_to.alert
+    time.sleep(1)
+    alert.accept()
+    print("Alert accepted")
+except TimeoutException:
+    print("No alert")
+
+email.send_keys("kau@gmail.com")
+uname.send_keys("kau")
+pwd.send_keys("kau")
+time.sleep(2)
+button.click()
+try:
+    WebDriverWait(driver, 3).until(EC.alert_is_present(
+    ), 'Timed out waiting for PA creation confirmation popup to appear.')
+    alert = driver.switch_to.alert
+    time.sleep(1)
+    alert.accept()
+    print("Alert accepted")
+except TimeoutException:
+    print("No alert")
 
 time.sleep(3)
 driver.close()
